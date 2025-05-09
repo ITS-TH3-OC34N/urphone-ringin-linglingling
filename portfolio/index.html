@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NAOMEH</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+      body {
+        font-size: 14px;
+        background-color: #0e0e0e;
+        color: #fff;
+        font-family: Orbitron, Helvetica, sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      img {
+        height: 100px;
+        border-radius: 30px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: lightblue;
+        gap: 10px;
+      }
+      .logo img {
+        width: 100px;
+        height: 100px;
+        shadow: 0px, 0px, 12px, lightblue;
+      }
+      a {
+        display: flex;
+        color: gray;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        flex-direction: row-reverse;
+      }
+      .active {
+        color: white;
+        background-color: red;
+        border-radius: 4px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+      }
+      .menu .active {
+        color: white;
+        padding-left: 20px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: red;
+        border-radius: 4px;
+      }
+      div .header {
+        gap: 10px;
+      }
+      .logo img {
+        border: 2px solid lightblue;
+        border-radius: 7px;
+        outline: none;
+        border-color: lightblue;
+        border-radius: 30px;
+      }
+      .summary {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        margin-top: 50px;
+      }
+      .summary-item-title {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .summary-item-content {
+        display: flex;
+        gap: 30px;
+        text-align: center;
+      }
+      .summary-item-number {
+        font-size: 30px;
+      }
+      .summary-item-text {
+        color: gray;
+      }
+
+      .summary div {
+        color: lightblue;
+      }
+      .facts {
+        display: flex;
+        margin: 70px;
+        align-items: center;
+      }
+
+      .gif {
+        width: 200px;
+        height: 200px;
+      }
+      .fact-image {
+        flex: 1;
+        text-align: center;
+      }
+      .fact-content {
+        flex: 1;
+      }
+      .heading {
+        font-size: 30px;
+        border-bottom: 5px solid lightblue;
+      }
+      .fact {
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      .vids {
+        margin-top:30px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-left:30px;
+        gap:20px;
+      }
+      .fav{
+        font-size:30px;
+        border-bottom: 5px solid lightblue;
+      }
+      iframe{
+        width:250px;
+}
+.animated-rainbow {
+     animation: rainbowShadow 7s infinite;
+}
+
+@keyframes rainbowShadow {
+ 0%{
+ box-shadow: 0 0 10px 2px rgba(30, 182, 191)
+  
+}   
+  5% {
+    box-shadow: 0 0 10px 2px rgba(30, 182, 191)
+  }  
+  
+  33% {
+    box-shadow: 0 0 10px 2px rgba(120, 189, 223); 
+    }
+    66% {
+        box-shadow: 0 0 10px 2px rgb(91, 127, 223); 
+    100% {
+        box-shadow: 0 0 10px 2px rgb(155, 127, 223); 
+    }
+   
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="locations">Sydney,AU</div>
+        <div class="logo">
+          <img
+            src="https://media.tenor.com/38WenqQj1a8AAAAe/aesthetic-genshin-impact.png"
+          />
+
+          <div>Naomi</div>
+        </div>
+        <div class="menu">
+          <a class="active">Home</a>
+          <a>my games</a>
+          <a>My friends list</a>
+        </div>
+      </div>
+
+      <div class="summary">
+        <div class="summary-item">
+          <div class="summary-item-title">watched</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">237</div>
+              <div class="summary-item-text">Movies</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">23</div>
+              <div class="summary-item-text">Series</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">02</div>
+              <div class="summary-item-text">Docs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">games played</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">178</div>
+              <div class="summary-item-text">action games</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">21</div>
+              <div class="summary-item-text">RPG</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">08</div>
+              <div class="summary-item-text">FPS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">Time slept</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">3</div>
+              <div class="summary-item-text">Years</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">9</div>
+              <div class="summary-item-text">Months</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">10</div>
+              <div class="summary-item-text">Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact-image">
+          <img
+            class="gif"
+            src="https://cutecafe.art/wp-content/uploads/2023/03/e9e62.gif"
+          />
+        </div>
+        <div class="fact-content">
+          <div class="heading">True Facts</div>
+          <ul>
+            <li class="fact">I've been playing roblox ever since 2019</li>
+            <li class="fact">I am a professional mimic soloist</li>
+            <li class="fact">
+              I only play X-Box/ PS games with my father, never mother
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="favourite">
+        <div class="fav">Favourite videos</div>
+        <div class="vids">
+          <iframe class="animated-rainbow"
+            src="https://www.youtube.com/embed/ur48jVNNlKk?si=i6JqIYC6vRvc9In5"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe class="animated-rainbow"
+            src="https://www.youtube.com/embed/FvTkNlXMEhI?si=pg23-XsxWeAIDW28"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe class="animated-rainbow"
+            src="https://www.youtube.com/embed/1DE7Mc9ZkSI?si=2MBOtt_bkNcKbOof"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+     
+      </div>
+    </div>
+  </body>
+</html>

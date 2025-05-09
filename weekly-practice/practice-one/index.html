@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .jeryyyy {
+        height: 50px;
+        width: 100px;
+        background-color: #b4dd1e;
+      }
+      .world {
+        height: 50px;
+        width: 100px;
+        background-color: lightblue;
+      }
+      .nonbi {
+        height: 50px;
+        width: 100px;
+        background: pink;
+      }
+      .Prison {
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="jeryyyy" onclick="popUp()">Hello world!!</button>
+    <button class="world" onclick="popUp2('ii Hola Jeryyyy!! ;-)')">
+      ii Hola Jeryyyy!!9p0p09
+    </button>
+    <button class="Prison" onclick="basicallyPrisonAtHome()">2+2 = 4</button>
+    <button class="nonbi" onclick="changedTheLabel ()">
+      Change my label :D
+    </button>
+    <div class="Ramenond">EMPTY</div>
+    <button class="HAWANNAONANA" onclick="solveTheEQUATION()">
+      (8x3)-1000
+    </button>
+  </body>
+  <script>
+    function popUp(message) {
+      alert('hello World :-)');
+    }
+    function popUp2(message) {
+      alert(message);
+    }
+    function changedTheLabel() {
+      document.querySelector('.nonbi');
+      let nonbiButton = document.querySelector('.nonbi');
+      nonbiButton.innerHTML = 'HELLO YOU TWO :)';
+    }
+    function basicallyPrisonAtHome() {
+      let basicallyPrisonAtHomeElement = document.querySelector('Ramenond');
+      basicallyPrisonAtHomeElement.innerHTML = ' The Result Of 2+2 IS.....4.';
+    }
+    function solveTheEQUATION() {
+      let result = 8 * 3 - 1000;
+
+      alert(result);
+    }
+  </script>
+</html>

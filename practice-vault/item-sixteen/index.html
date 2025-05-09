@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button:hover {
+        box-shadow: 0px 0px 5px 3px #00000030;
+        width: 210px;
+        height: 60px;
+        transition: all 0.5s;
+      }
+
+      button {
+        background: #ffffff59;
+        border-radius: 10px;
+        border: none;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0px 0px 5px 3px #ffffffad;
+      }
+      .red {
+        background-color: #b83b25;
+        transition: all 3s;
+      }
+      .orange {
+        background: #d68131;
+        transition: all 3s;
+      }
+      .yellow {
+        background: #e6a510;
+        transition: all 3s;
+      }
+      .green {
+        background: #45a14d;
+        transition: all 3s;
+      }
+      .blue {
+        background: #669fd9;
+        transition: all 3s;
+      }
+      .pink {
+        background: #ffa6c9;
+        transition: all 3s;
+      }
+      .lightRed {
+        background: #ffa6a6;
+        transition: all 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container red">
+      <button onclick="changeColor()">Change the color</button>
+    </div>
+    <script>
+      function changeColor() {
+        let container = document.querySelector('.container');
+
+        if (container.classList.contains('red')) {
+          container.classList.remove('red');
+          container.classList.add('orange');
+        } else if (container.classList.contains('orange')) {
+          container.classList.remove('orange');
+          container.classList.add('yellow');
+        } else if (container.classList.contains('yellow')) {
+          container.classList.remove('yellow');
+          container.classList.add('green');
+        } else if (container.classList.contains('green')) {
+          container.classList.remove('green');
+          container.classList.add('blue');
+        } else if (container.classList.contains('blue')) {
+          container.classList.remove('blue');
+          container.classList.add('pink');
+        } else if (container.classList.contains('pink')) {
+          container.classList.remove('pink');
+          container.classList.add('lightRed');
+        } else if (container.classList.contains('lightRed')) {
+          container.classList.remove('lightRed');
+          container.classList.add('red');
+        }
+      }
+    </script>
+  </body>
+</html>

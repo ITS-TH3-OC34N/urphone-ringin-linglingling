@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @keyframes Slide-2Right {
+        0% {
+          background-color: lightred;
+          left: -60px;
+        }
+        15% {
+          background-color: lightorange;
+        }
+        30% {
+          background-color: lightyellow;
+        }
+        45% {
+          background-color: lightgreen;
+        }
+        60% {
+          background-color: lightblue;
+        }
+        75% {
+          background-color: violet;
+        }
+        100% {
+          background-color: pink;
+          left: 750px;
+        }
+      }
+      @keyframes U-2Dauwn {
+        0% {
+          top: 0px;
+        }
+        50% {
+          top: 630px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        position: relative;
+        width: 700px;
+        height: 600px;
+        border: 3px solid lightgrey;
+      }
+      .red-box {
+        animation: Slide-2Right 7s forwards infinite;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: red;
+        top: 300px;
+        left: -60px;
+      }
+      .blue-baux {
+        animation: U-2Dauwn 8s forwards infinite;
+        position: absolute;
+        left: 325px;
+        width: 60px;
+        height: 60px;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red-box Slide-2Right"></div>
+      <div class="blue-baux U-2Dauwn"></div>
+    </div>
+  </body>
+</html>

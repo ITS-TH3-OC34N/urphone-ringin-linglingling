@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      .container {
+      }
+      .page {
+        overflow: hidden;
+      }
+      .pic {
+        animation: rainbowShadow 6s infinite;
+        border-radius: 10px;
+        position: relative;
+        gap: 20px;
+      }
+      .pictures {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        border-radius: 10px;
+        gap: 20px;
+      }
+
+      .blue-riding-hood-img {
+        animation: sigma 5s;
+        width: 10%;
+        position: absolute;
+        bottom: -150px;
+      }
+
+      @keyframes sigma {
+        100% {
+          bottom: 50px;
+        }
+      }
+
+      .text {
+        font-size: 25px;
+        position: absolute;
+        top: 40%;
+        left: 20px;
+        right: 20px;
+        background: rgb(0 0 0 / 80%);
+        color: white;
+        border-radius: 15px;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+
+      .question {
+        font-size: 35px;
+      }
+
+      @keyframes rainbowShadow {
+        0% {
+          box-shadow: 0 0 10px 2px rgba(30, 182, 191);
+        }
+        5% {
+          box-shadow: 0 0 10px 2px rgba(30, 182, 191);
+        }
+
+        33% {
+          box-shadow: 0 0 10px 2px rgba(120, 189, 223);
+        }
+        66% {
+          box-shadow: 0 0 10px 2px rgb(91, 127, 223);
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgb(155, 127, 223);
+        }
+      }
+    </style>
+  </head>
+  <body class="indie-flower-regular">
+    <div class="container">
+      <div class="page page-4 tilt-in-fwd-tr">
+        <div class="heading">
+          <span class="blue">Blue</span> Riding hood leaves home with her basket
+          and
+        </div>
+        <div class="question">Which road will she take?</div>
+        <div class="pictures rainbowShadow">
+          <div class="pic">
+            <img
+              class="long pics pictures rainbowShadow"
+              src="	https://img.freepik.com/free-vector/beautiful-land…travel-mountains-adventure-concept_1150-37321.jpg"
+            />
+            <div class="text-1 text lobster-regular">The Fun Looong Road</div>
+          </div>
+          <div class="pic">
+            <img
+              class="short pics pictures rainbowShadow"
+              src="https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-61222.jpg"
+            />
+            <div class="text-2 text lobster-regular">The Short Boring way</div>
+          </div>
+        </div>
+        <img
+          class="blue-riding-hood-img"
+          src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+        />
+      </div>
+    </div>
+  </body>
+</html>

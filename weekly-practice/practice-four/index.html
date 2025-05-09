@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .THEimage {
+        border: solid 3px grey;
+        border-radius: 20px;
+        width: 300px;
+        height: 300px;
+      }
+      .switch {
+        background: white;
+        border: gray 3px solid;
+        border-radius: 20px;
+      }
+      .hidden {
+        display: none;
+      }
+      .normal {
+      }
+      .black {
+        color: black;
+      }
+      .red {
+        color: #ad1207;
+      }
+      .orange {
+        color: #d19b82;
+      }
+      .yellow {
+        color: #edca5f;
+      }
+      .green {
+        color: #90bf5e;
+      }
+      .blue {
+        color: #5ea2d6;
+      }
+      .purple {
+        color: #9d80a8;
+      }
+      .pink {
+        color: #f569a6;
+      }
+      .white {
+        color: white;
+        background: black;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="THEimage"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5hRYyNHf-_KowglYLcteyOLYrJtQV3Ff0Fw&s"
+    />
+    <p>me after hearing bro</p>
+    <button class="switch" onclick="imageSwitch()">Switch image</button>
+    <div>
+      <ul class="theList"></ul>
+    </div>
+    <input class="input" />
+    <button onclick="listAdder()">add to list</button>
+
+    <p class="texting hidden">
+      My bro said to me:"chinese girls have the most weirdest names, like a was
+      hitting up a chinese girl once and she kept saying "I'm Tu Yung!" like bro
+      i know, chill."
+    </p>
+    <button class="mainButton" onclick="textHider()">hide/show</button>
+    <div>
+      <p class="changeColor black">RUBY CHAN!</p>
+      <button class="colorButton" onclick="colorChanger()">HAIII?</button>
+    </div>
+    <div>
+      <input class="Input1" type="number" />
+      <input class="Input2" type="number" />
+      <button class="addButton" onclick="calculatorAdd()">ADD</button>
+      <div class="Result"></div>
+    </div>
+  </body>
+  <script>
+    function imageSwitch() {
+      let img = document.querySelector('.THEimage');
+      img.src =
+        'https://media0.giphy.com/media/9zoe1SFIBd8PPqz5cr/giphy.gif?cid=6c09b952ukhdt80tt5smjy04tydv7zggqkpsou7jt71mwajr&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g';
+    }
+
+    function listAdder() {
+      let list = document.querySelector('.theList');
+      let anInput = document.querySelector('.input');
+      let anInputValue = anInput.value;
+      list.innerHTML = `${list.innerHTML}<li>${anInputValue}</li>`;
+    }
+    function textHider() {
+      let text = document.querySelector('.texting');
+      if (text.classList.contains('hidden')) {
+        text.classList.remove('hidden');
+      } else {
+        text.classList.add('hidden');
+      }
+    }
+    function colorChanger() {
+      let colorText = document.querySelector('.changeColor');
+      if (colorText.classList.contains('black')) {
+        colorText.classList.remove('black');
+        colorText.classList.add('red');
+      } else if (colorText.classList.contains('red')) {
+        colorText.classList.remove('red');
+        colorText.classList.add('orange');
+      } else if (colorText.classList.contains('orange')) {
+        colorText.classList.remove('orange');
+        colorText.classList.add('yellow');
+      } else if (colorText.classList.contains('yellow')) {
+        colorText.classList.remove('yellow');
+        colorText.classList.add('green');
+      } else if (colorText.classList.contains('green')) {
+        colorText.classList.remove('green');
+        colorText.classList.add('blue');
+      } else if (colorText.classList.contains('blue')) {
+        colorText.classList.remove('blue');
+        colorText.classList.add('purple');
+      } else if (colorText.classList.contains('purple')) {
+        colorText.classList.remove('purple');
+        colorText.classList.add('pink');
+      } else if (colorText.classList.contains('pink')) {
+        colorText.classList.remove('pink');
+        colorText.classList.add('white');
+      } else if (colorText.classList.contains('white')) {
+        colorText.classList.remove('white');
+        colorText.classList.add('black');
+      }
+    }
+    function calculatorAdd() {
+      let Inp1 = document.querySelector('.Input1');
+      let Inp2 = document.querySelector('.Input2');
+      let results = document.querySelector('.Result');
+      let Inp1Value = Number(Inp1.value);
+      let Inp2Value = Number(Inp2.value);
+      let total = Inp1Value + Inp2Value;
+      results.innerHTML = `The result is... ${total}`;
+    }
+  </script>
+</html>

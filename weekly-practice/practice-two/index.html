@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style></style>
+  </head>
+  <body>
+    <button class="hello" onclick="popUp('Hello Jerry')">This is Jerry</button>
+    <button class="learnAbc" onclick="abc('My name is ABC')">
+      What is your name?
+    </button>
+    <div class="theChange">Empty</div>
+    <button class="aButton" onclick="changedLabel()">
+      change the div content
+    </button>
+    <input class="buttonbestie" placeholder="type something" />
+    <button class="inputbestie" onclick="getInputValue()">
+      Get input value
+    </button>
+    <div class="aDiv">Another empty div</div>
+    <input class="something" placeholder="insert something" />
+    <button class="changed">Change the content based on input!!</button>
+  </body>
+  <script>
+    function popUp(message) {
+      alert(message);
+    }
+    function abc(abc) {
+      alert(abc);
+    }
+    function changedLabel() {
+      let changedDiv = document.querySelector('.theChange');
+      changedDiv.innerHTML = 'My content has been changed!';
+    }
+    function getInputValue() {
+      let myInput = document.querySelector('.buttonbestie');
+      let getInputValue = myInput.value;
+      alert(getInputValue);
+    }
+    function changeContent() {
+      let aThing = document.querySelector('.something');
+      let aThingValue = aThing.value;
+      document.querySelector('.aDiv').innerHTML = aThing.value;
+    }
+  </script>
+</html>

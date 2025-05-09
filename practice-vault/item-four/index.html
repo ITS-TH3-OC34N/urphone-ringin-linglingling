@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+      body {
+        display: flex;
+        align-items: center;
+        background: url('https://img.freepik.com/free-photo/smooth-tan-smoke_23-2147734860.jpg?w=3000');
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        justify-content: center;
+      }
+      .cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('https://w0.peakpx.com/wallpaper/872/421/HD-wallpaper-ocean-blue-dark-night-sea-thunder-wave.jpg');
+        width: 430px;
+        height: 600px;
+        box-shadow: 0 6px 10px #83118b;
+      }
+      .logo {
+        font-family: 'Squada One', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+      }
+      .milestone {
+        position: absolute;
+        top: 90px;
+        font-size: 55px;
+        background-color: white;
+        padding-bottom: 50px;
+        z-index: 10;
+      }
+      .sub {
+        position: absolute;
+        top: 160px;
+        background-color: white;
+        z-index: 10;
+      }
+      .lines {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+        height: 270px;
+        width: 1px;
+        position: absolute;
+        z-index: 5;
+      }
+      .box-2 {
+        animation: rotation 1s forwards;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 260px;
+        height: 260px;
+      }
+
+      @keyframes rotation {
+        100% {
+          transform: rotate(45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <div class="logo">
+        <div class="milestone">MILESTONE</div>
+        <div class="sub">Where progress meets achievement</div>
+        <div class="lines"></div>
+        <div class="box-2"></div>
+      </div>
+    </div>
+  </body>
+</html>

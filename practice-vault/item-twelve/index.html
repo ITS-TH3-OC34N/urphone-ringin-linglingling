@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=League+Script&family=Rubik+Puddles&display=swap');
+      body {
+        background: url(https://s3.envato.com/files/311287013/DSC_5724.jpg)
+          no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        z-index: 0;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+      }
+      .container {
+        background: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/7b607471664091.5bcd8a8824ac4.gif);
+        width: 600px;
+        height: 600px;
+        z-index: 4;
+        position: relative;
+        border: 10px white solid;
+        overflow: hidden;
+        margin-left: 50px;
+        transform: rotate(-3deg);
+        box-shadow: 0px 2px 10px #00000085;
+      }
+      .trees {
+        z-index: 0;
+        width: 850px;
+        position: absolute;
+        top: 28px;
+        left: -106px;
+      }
+      .snow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+      }
+      .pin {
+        position: absolute;
+        right: 0;
+        top: -10;
+        width: 120px;
+        height: 100px;
+      }
+      .content {
+        position: absolute;
+        display: flex;
+        align-items: center;
+
+        right: -1000px;
+        animation: santa 10s ease infinite;
+      }
+      .text {
+        font-family: "Rubik Puddles", serif;
+  font-weight: 400;
+  font-style: normal;
+        color: lightyellow;
+        text-shadow: 3px 0px 6px white;
+        font-size: 40px;
+        width: 600px;
+      }
+      .wavy {
+        position: relative;
+        animation: wavy 1.5s ease infinite;
+        top: 0;
+        left: 0;
+      }
+      .mariah{
+        width:300px;
+        height:300px;
+      }
+
+      @keyframes wavy {
+        50% {
+          top: -15px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+
+      @keyframes santa {
+        100% {
+          right: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="trees"
+        src="https://jack-vo.github.io/kid-coding-class/practice-vault/beginner/item-12/winter_snowy_night_forest_landscape_15577333.png"
+      />
+      <img
+        class="snow"
+        src="
+     https://www.animationsoftware7.com/img/agifs/snow02.gif"
+      />
+      <img
+        class="pin"
+        src="	https://www.pngall.com/wp-content/uploads/2/Drawing-Pin.png"
+      />
+      <div class="content">
+        <img
+          src="https://img1.picmix.com/output/stamp/normal/3/6/8/9/2409863_0d10d.gif"
+        />
+
+        <div class="text">MERRY CHRISTMAS 2024!</div>
+      </div>
+      <div class="mariah">
+      <img src="https://i.ytimg.com/vi/XpSdD63j7Y4/maxresdefault.jpg"/>
+      </div>
+    </div>
+    <script>
+      function applyAnimation() {
+        let delay = 200;
+        let textElement = document.querySelector('.text');
+        let textContent = textElement.textContent;
+
+        textElement.innerHTML = textContent
+          .split('')
+          .map((letter) => {
+            return `<span>${letter}</span>`;
+          })
+          .join('');
+
+        Array.from(textElement.children).forEach((span, index) => {
+          setTimeout(() => span.classList.add('wavy'), index * 60 + delay);
+        });
+      }
+
+      applyAnimation();
+    </script>
+  </body>
+</html>

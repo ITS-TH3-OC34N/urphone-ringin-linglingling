@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+      body {
+        display: flex;
+        align-items: center;
+        background: url('https://img.freepik.com/free-photo/smooth-tan-smoke_23-2147734860.jpg?w=3000');
+        width: 100vw;
+        height: 100vh;
+
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: url('https://cdn.hero.page/pfp/54899c9b-88db-42df-91e6-0ad43a25645c-depressed-anime-girl-in-the-rain-aesthetics-depressed-anime-girl-pfp-2.png');
+        background-size: cover;
+        width: 550px;
+        height: 550px;
+        border: 20px white solid;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+      }
+      .text {
+        animation: rotation 1s forwards;
+        position: absolute;
+        bottom: -20px;
+        right: -30px;
+        font-family: 'La Belle Aurore', cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: crimson;
+        font-size: 50px;
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.7);
+        width: 400px;
+        z-index: 6;
+      }
+      .line-1 {
+        animation: move 3s forwards;
+        position: absolute;
+        left: 30px;
+        width: 5px;
+        height: 550px;
+        background-color: white;
+      }
+      .line-2 {
+        animation: movev 3s linear forwards;
+        position: absolute;
+        width: 550px;
+        height: 5px;
+        top: 30px;
+        background-color: white;
+      }
+      @keyframes movev {
+        100% {
+          top: 500px;
+          height: 20px;
+        }
+      }
+
+      @keyframes move {
+        100% {
+          left: 500px;
+          width: 20px;
+        }
+      }
+
+      @keyframes rotation {
+        100% {
+          transform: rotate(-8deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">Tears are words the heart cant say</div>
+      <div class="line-1"></div>
+      <div class="line-2"></div>
+    </div>
+  </body>
+</html>

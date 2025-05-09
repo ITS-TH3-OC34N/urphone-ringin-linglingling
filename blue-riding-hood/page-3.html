@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <style>
+      .animated-rainbow {
+        animation: rainbowShadow 7s infinite;
+      }
+
+      .room {
+        position: relative;
+      }
+
+      .deadzpookie {
+        position: absolute;
+        top: 5px;
+        right: 170px;
+      }
+      .logo-british {
+        position: absolute;
+        top: 150px;
+        left: 230px;
+      }
+      .logo-homework {
+        position: absolute;
+        top: 330px;
+        left: 370px;
+      }
+      .tiktok {
+        position: absolute;
+        top: 200px;
+        left: 500px;
+      }
+      .hhm-intresting {
+        position: absolute;
+        top: 310px;
+        left: 630px;
+      }
+      .rlly {
+        position: absolute;
+        top: 310px;
+        left: 100px;
+      }
+      @keyframes rainbowShadow {
+        0% {
+          box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.8); /* Red */
+        }
+        16% {
+          box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.8); /* Orange */
+        }
+        33% {
+          box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8); /* Yellow */
+        }
+        50% {
+          box-shadow: 0 0 10px 2px rgba(0, 128, 0, 0.8); /* Green */
+        }
+        66% {
+          box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.8); /* Blue */
+        }
+        83% {
+          box-shadow: 0 0 10px 2px rgba(75, 0, 130, 0.8); /* Indigo */
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgba(238, 130, 238, 0.8); /* Violet */
+        }
+      }
+      @keyframes slaying {
+        100% {
+          left: 250px;
+        }
+      }
+
+      .blue-riding-hood-img {
+        width: 140px;
+        z-index: 10;
+      }
+      .blue-riding-hood-img {
+        width: 140px;
+        position: absolute;
+        left: -200px;
+        top: 270px;
+        animation: slaying 3s forwards;
+        animation-delay: 0.5s;
+      }
+      .room button {
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        border-radius: 50px;
+      }
+
+      .room button img {
+        width: 50px;
+      }
+
+      .room button:hover {
+        animation: heartbeat 1.5s ease-in-out infinite both;
+      }
+    </style>
+  </head>
+  <body class="indie-flower-regular">
+    <div class="container">
+      <div class="page page-3 tilt-in-fwd-tr">
+        <div>
+          <span class="blue">Blue</span> Riding Hood has received a hand-written
+          letter explaining that her grandmother is ill!
+        </div>
+        <div class="text-bold">What gift should she take?</div>
+        <div class="room">
+          <img
+            src="https://t3.ftcdn.net/jpg/03/23/06/24/360_F_323062400_Mr07yXwQcUrRUO3LSs7gFYoiO74e2jgF.jpg"
+          />
+
+          <img
+            class="blue-riding-hood-img"
+            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+          />
+
+          <button class="logo-homework animated-rainbow">
+            <img
+              src="https://cdn-icons-png.freepik.com/512/579/579689.png"
+              onclick="alert('She is a pretty professional thinker... maybe one day go to her house to ask her to do your homework but not now!')"
+            />
+          </button>
+          <button
+            class="logo-british lol animated-rainbow"
+            onclick="alert('So british for what? Can Ah hAVe a cUp O teA?')"
+          >
+            <img
+              src="https://cdn-icons-png.freepik.com/512/13473/13473803.png"
+            />
+          </button>
+          <button
+            class="tiktok lol animated-rainbow"
+            onclick="alert('Brainrot grandma? Teach her Gen Z slangs first atleast')"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
+            />
+          </button>
+          <button
+            class="deadzpookie lol animated-rainbow"
+            onclick="alert('...I- NO!')"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpErYe-S5rfCXOr_8oFLbqf2IhKn8cWj-iw&s"
+            />
+          </button>
+          <a  href="page-4.html">
+          <button class="hhm-intresting lol animated-rainbow">
+            <img src="https://cdn-icons-png.flaticon.com/512/249/249217.png" />
+          </a>
+          </button>
+          <button
+            class="rlly lol animated-rainbow"
+            onclick="alert('...You dont want her to get engaged to a random fella..right?')"
+          >
+            <img src="https://cdn-icons-png.flaticon.com/512/224/224864.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

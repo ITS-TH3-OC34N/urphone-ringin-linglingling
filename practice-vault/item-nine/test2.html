@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .fancy {
+        background-color: #007bff;
+        border: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        color: white;
+        font-size: 60px;
+      }
+      .norm {
+        background-color: #b4dd1e;
+        border: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        color: white;
+        font-size: 57px;
+      }
+      .maint {
+        font-size: 60px;
+        padding-bottom: 50px;
+        padding-top: 150px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .fancy {
+        margin-left: 20px;
+      }
+      .name {
+        color: #b4dd1e;
+        font-size: 70px;
+      }
+      .qualities {
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="maint">Hello...</div>
+      <div class="buttons">
+        <button class="norm" onclick="simpleIntro('')">
+          Simple Introduction
+        </button>
+        <button class="fancy" onclick="fancyIntro('')">
+          Fancy introduction
+        </button>
+      </div>
+    </div>
+    <script>
+      function simpleIntro() {
+        let simpleMessage = `Hello, I'm Sean Le and I have autism and schizophrenia`;
+
+        document.querySelector('.maint').innerHTML = simpleMessage;
+      }
+      function fancyIntro() {
+        let fancyMessage = `Hello, I'm <span class="name"> Sean Le </span> and I have <span class="qualities">autism and dyslexia</span>`;
+
+        document.querySelector('.maint').innerHTML = fancyMessage;
+      }
+    </script>
+  </body>
+</html>

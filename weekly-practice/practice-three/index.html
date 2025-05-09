@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button class="Button1" onclick=" popUpButton('Dirty cash i need you ')">
+      1 button
+    </button>
+    <button class="button2" onclick="alphabet('abc')">Money Talks</button>
+    <button class="button3">Change the weather (insert rain)</button>
+    <div class="div1">
+      Oh com'here youn boy! Such a lovely day dont yer think?
+    </div>
+    <input
+      class="TheInput"
+      placeholder="Type a number"
+      type="number"
+      min="0"
+      max="10"
+    />
+    <button class="CheckTheResult" onclick="GradingResults()">
+      Check Results-
+    </button>
+    <div class="grading">Grade results.</div>
+  </body>
+  <script>
+    function popUpButton(message) {
+      alert(message);
+    }
+    function alphabet(abc) {
+      let button = document.querySelector('.button2');
+      let buttonText = button.innerHTML;
+      alert(buttonText);
+    }
+
+    function theWeather() {
+      let ChangeDiv = document.querySelector('.div1');
+      ChangeDiv.innerHTML = 'Oh my nevermind! its raining';
+    }
+
+    function GradingResults() {
+      //Step 1-I need to get the value that the use put in the input.
+      // - Select the input and save it to a variable
+      let gradingInput = document.querySelector('.TheInput');
+      // - Get the input value and save it to a variable
+      let gradingInputValue = gradingInput.value;
+      let result = document.querySelector('.grading');
+
+      if (gradingInputValue == 10) {
+        result.innerHTML = 'Perfect! I have nothing else to teach you.';
+      } else if (gradingInputValue >= 7 && gradingInputValue <= 9) {
+        result.innerHTML = 'Great Job! But you still have a long way to go.';
+      } else if (gradingInputValue >= 4 && gradingInputValue <= 6) {
+        result.innerHTML = 'Buddy, try harder next time.';
+      } else if (gradingInputValue >= 1 && gradingInputValue <= 3) {
+        result.innerHTML =
+          'Our centre is open 24/7. The reception is over there.';
+      } else {
+        result.innerHTML = 'I give up';
+      }
+    }
+  </script>
+</html>

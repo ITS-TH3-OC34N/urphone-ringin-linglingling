@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=League+Script&family=Monomakh&family=Rubik+Puddles&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+      body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 484px;
+        gap: 10px;
+      }
+      .game-button {
+        background: lightblue;
+        padding: 50px;
+        border-radius: 15px;
+        border: 3px #8da9ba solid;
+        font-size: 30px;
+        color: transparent;
+        font-family: 'Sour Gummy', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings: 'wdth' 100;
+      }
+      .selected {
+        background: white;
+        color: crimson;
+      }
+      .match {
+        background-color: lightgreen;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="game-button item-1" onclick="selectItem('.item-1')">
+        A
+      </button>
+      <button class="game-button item-2" onclick="selectItem('.item-2')">
+        B
+      </button>
+      <button class="game-button item-3" onclick="selectItem('.item-3')">
+        A
+      </button>
+      <button class="game-button item-4" onclick="selectItem('.item-4')">
+        C
+      </button>
+      <button class="game-button item-5" onclick="selectItem('.item-5')">
+        C
+      </button>
+      <button class="game-button item-6" onclick="selectItem('.item-6')">
+        B
+      </button>
+    </div>
+    <script>
+      let previousSelectedItem;
+
+      function selectItem(itemClassName) {
+        // let selectedItem = document.querySelector(itemClassName);
+        // selectedItem.classList.add('selected');
+
+        // if (!previousSelectedItem) {
+        //   previousSelectedItem = selectedItem;
+        // } else {
+        //   if (previousSelectedItem.innerHTML === selectItem.innerHTML) {
+        //     previousSelectedItem.classList.add('match');
+        //     selectedItem.classList.add('match');
+        //   } else {
+        //     previousSelectedItem.classList.remove('selected');
+        //     selectedItem.classList.remove('selected');
+        //   }
+        //   previousSelectedItem = undefined;
+        // }
+        let selectedCard = document.querySelector(itemClassName);
+      }
+    </script>
+  </body>
+</html>

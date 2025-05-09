@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      @keyframes Slide-2Right {
+        0% {
+          background-color: lightred;
+          top: 0px;
+        }
+        15% {
+          background-color: darkred;
+          bottom: 400px;
+        }
+        30% {
+          left: 100px;
+        }
+        45% {
+          left: 300px;
+        }
+        60% {
+          bottom: 40px;
+        }
+        75% {
+          left: 80px;
+        }
+        100% {
+          background-color: lightpink;
+          left: 645px;
+        }
+      }
+      @keyframes U-2Dauwn {
+        0% {
+          background-color: darkblue;
+          top: 0px;
+        }
+        50% {
+          top: 545px;
+        }
+        100% {
+          background-color: lightblue;
+          top: 0px;
+        }
+        50% {
+          background-color: lightblue;
+          down: 0px;
+        }
+        0% {
+          background-color: darkblue;
+          down: 0px;
+        }
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .missed-box {
+        position: relative;
+        width: 700px;
+        height: 600px;
+        border: 3px solid lightgrey;
+        display: flex;
+        background-color: lightgray;
+      }
+      .crazy-box {
+        animation: Slide-2Right 0.5s forwards infinite;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: red;
+        top: 200px;
+        left: 1000px;
+      }
+      .normal-box {
+         animation: U-2Dauwn 4s forwards infinite;
+        position: absolute;
+        left: 325px;
+        width: 60px;
+        height: 60px;
+        background: skyblue;
+      }
+      .textscore {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="missed-box" onclick="onHittingContainer()"></div>
+      <div class="crazy-box" onclick="onHittingCrazyBox()"></div>
+      <div class="normal-box" onclick="onHittingNormalBox()"></div>
+    </div>
+    <div class="score-board">Score: <span class="score">0</span></div>
+    <script>
+      // Initialize score
+      let score = 0;
+      const scoreElement = document.querySelector('.score');
+
+      // Function to handle clicking the missed-box
+      function onHittingContainer() {
+        score = score - 1;
+        scoreElement.innerHTML = score;
+      }
+
+      // Function to handle clicking the normal-box
+      function onHittingNormalBox() {
+        score += 3;
+        scoreElement.innerHTML = score;
+      }
+      // Function to handle clicking the crazy-box
+      function onHittingCrazyBox() {
+        score += 20;
+        scoreElement.innerHTML = score;
+      }
+    </script>
+  </body>
+</html>
