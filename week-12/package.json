@@ -1,0 +1,21 @@
+{
+    "name": "urphone-ringin-linglingling",
+    "version": "0.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/ITS-TH3-OC34N/urphone-ringin-linglingling.git",
+    "author": "CABRAMATTA <naomivo.au@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "servor --reload"
+    },
+    "stackblitz": {
+        "installDependencies": true
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3"
+    },
+    "dependencies": {
+        "servor": "^4.0.2"
+    }
+ }
+ 
