@@ -68,6 +68,11 @@ body {
 }
 .text-bold {
   font-weight: bold;
+  font-size:40px;
+}
+.pictureBG{
+  width:1000px;
+  height:400px;
 }
 @keyframes heartbeat {
   from {

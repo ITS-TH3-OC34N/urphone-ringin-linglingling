@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>HTML Template</title>
+   <style>
+    .THEimg {
+        width:400px;
+        height:700px;
+    }
+    .zoom-in{
+        width:500px;
+        height:800px;
+    }
+    .zoom-out{
+        width:300px;
+        height:600px;
+    }
+   </style>
+ </head>
+ <body>
+    <button class="aButton" onclick="clickedButton()">Click Me</button>
+  <input class="anInput"/>
+  <button class="echo" onclick="echoInput()"> Echo </button>
+  <p class="paragraph"></p>
+  <button class="zoomO" onclick="zooming()">Zoom in</button>
+  <button class="zoomI" onclick="zoomIn()">Zoom out</button>
+  <img  class="THEimg etheral" src="https://i.pinimg.com/736x/57/63/c3/5763c30cd2a9c0922744819eef9f4067.jpg"/>
+  <script>
+        function clickedButton () {
+            let clicked = document.querySelector('.aButton');
+            clicked.innerHTML = "Clicked!";
+        }
+function echoInput () {
+let input = document.querySelector('.anInput');
+let echoButton = document.querySelector('.echo');
+let para = document.querySelector('.paragraph');
+ let inputValue = input.value;
+ para.innerHTML = ` your result it = ${inputValue}`;
+
+}
+function zoomIn () {
+let Zi = document.querySelector('.zoomI');
+
+
+
+}
+    </script>
+ </body>
+</html>
