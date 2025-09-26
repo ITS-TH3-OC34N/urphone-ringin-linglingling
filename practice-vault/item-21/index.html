@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>HTML Template</title><style>
+    .button{
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+    }
+     .container{
+            display:flex;
+            justify-content: center;
+            gap:20px;
+            margin-top:20px;
+        }
+        .input1{
+          height:40px;
+          width:240px;
+          border-radius:5px;
+          border:gray solid 2px;
+          font-size:25px;
+
+        }
+   </style>
+ </head>
+ <body>
+  <div class="container">
+    <input class="input1"/>
+    <button class="button" onclick="inputChanger()">Click me to change input value.</button>
+ </div>
+ <script>
+  function inputChanger (){
+    let input = document.querySelector('.input1');
+   let button = document.querySelector('.button');
+    input.value = 'Button is clicked!';
+
+  }
+ </script>
+  </body>
+</html>

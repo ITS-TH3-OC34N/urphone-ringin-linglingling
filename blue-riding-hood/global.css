@@ -142,3 +142,21 @@ body {
 .storyline {
   margin-bottom: 20px;
 }
+ @keyframes rainbowShadow {
+        0% {
+          box-shadow: 0 0 10px 2px rgb(232, 73, 73);
+        }
+        5% {
+          box-shadow: 0 0 10px 2px rgb(255, 179, 58);
+        }
+
+        33% {
+          box-shadow: 0 0 10px 2px rgb(233, 255, 92);
+        }
+        66% {
+          box-shadow: 0 0 10px 2px rgb(166, 91, 223);
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgb(155, 127, 223);
+        }
+      }

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background: rgb(242, 242, 242);
+      }
+      .container {
+        background: white;
+        padding: 100px;
+      }
+      .button1 {
+        padding: 15px 40px;
+      }
+      .input1 {
+        padding: 15px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>List of Numbers</div>
+      <input placeholder="Number" type="number" class="input1" />
+      <button class="button1" onclick="numberList()">Print</button>
+      <ul></ul>
+    </div>
+    <script>
+      function numberList() {
+        let input = document.querySelector('input1');
+        let result = '';
+        let inputValue = input.value;
+        for (let i = 0; i < inputValue; i++) {}
+      }
+    </script>
+  </body>
+</html>

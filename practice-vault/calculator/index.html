@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        padding-top: 200px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .header {
+        border: lightgray 2.5px solid;
+        width: 450px;
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+      }
+      .history {
+        z-index: 20;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+      .inputBox {
+        border: none;
+        margin-top: 50px;
+        border-radius: 5px;
+        font-size: 35px;
+        text-align: right;
+        padding-right: 20px;
+        flex: 1;
+        outline: none;
+      }
+
+      .row-1 {
+        display: flex;
+        gap: 4px;
+      }
+      button {
+        width: 112px;
+        height: 70px;
+        font-size: 25px;
+        border: none;
+        color: rgb(90, 90, 90);
+        border-radius: 5px;
+        background: #dbdce0;
+      }
+      .row-2 {
+        display: flex;
+        gap: 4px;
+      }
+      .row-3 {
+        display: flex;
+        gap: 4px;
+      }
+      .equation {
+        color: gray;
+      }
+      .r1b3 {
+        background: rgb(251, 77, 77);
+        color: white;
+      }
+      .r5b3 {
+        background: rgb(0, 140, 255);
+        color: white;
+      }
+      button:hover {
+        background: rgb(127, 127, 127);
+        color: white;
+      }
+      .r1b3:hover {
+        background: rgb(159, 3, 3);
+        color: rgb(255, 255, 255);
+      }
+      .r5b3:hover {
+        background: rgb(0, 88, 160);
+        color: white;
+      }
+      .history-button {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+      }
+
+      .history-button:hover {
+        background-color: #dbdce0;
+      }
+
+      .history-img {
+        width: 20px;
+      }
+
+      .list {
+        width: 200px;
+        list-style: none;
+        border: #dbdce0 solid 2px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: white;
+        position: absolute;
+        top: 23px;
+        left: 7px;
+        display: none;
+      }
+
+      .visible {
+        display: block;
+      }
+
+      .history li {
+        padding: 10px;
+      }
+
+      .history li:hover {
+        background-color: lightgray;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="history">
+          <button class="history-button" onclick="showHistory()">
+            <img
+              class="history-img"
+              src="https://upload.wikimedia.org/wikipedia/commons/2/27/OOjs_UI_icon_history.svg"
+            />
+          </button>
+          <ul class="list">
+            <li>lil uzi vert</li>
+            <li>is so peak</li>
+          </ul>
+        </div>
+
+        <input class="inputBox" type="text" readonly />
+        <div class="equation"></div>
+      </div>
+      <div class="row-1">
+        <button class="r1b1" onclick="onCalculatorButtonClick(`(`)">(</button>
+        <button class="r1b2" onclick="onCalculatorButtonClick(`)`)">)</button>
+        <button class="r1b3" onclick="onCalculatorButtonClick('DEL')">
+          DEL
+        </button>
+        <button class="r1b4" onclick="onCalculatorButtonClick('AC')">AC</button>
+      </div>
+      <div class="row-2">
+        <button class="r2b1" onclick="onCalculatorButtonClick('7')">7</button>
+        <button class="r2b2" onclick="onCalculatorButtonClick('8')">8</button>
+        <button class="r2b3" onclick="onCalculatorButtonClick('9')">9</button>
+        <button class="r2b4" onclick="onCalculatorButtonClick('/')">/</button>
+      </div>
+      <div class="row-3">
+        <button class="r3b1" onclick="onCalculatorButtonClick('4')">4</button>
+        <button class="r3b2" onclick="onCalculatorButtonClick('5')">5</button>
+        <button class="r3b3" onclick="onCalculatorButtonClick('6')">6</button>
+        <button class="r3b4" onclick="onCalculatorButtonClick('*')">*</button>
+      </div>
+      <div class="row-4">
+        <button class="r4b1" onclick="onCalculatorButtonClick('1')">1</button>
+        <button class="r4b2" onclick="onCalculatorButtonClick('2')">2</button>
+        <button class="r4b3" onclick="onCalculatorButtonClick('3')">3</button>
+        <button class="r4b4" onclick="onCalculatorButtonClick('-')">-</button>
+      </div>
+      <div class="row-">
+        <button class="r5b1" onclick="onCalculatorButtonClick('0')">0</button>
+        <button class="r5b2" onclick="onCalculatorButtonClick('.')">.</button>
+        <button class="r5b3" onclick="onCalculatorButtonClick('=')">=</button>
+        <button class="r5b4" onclick="onCalculatorButtonClick('+')">+</button>
+      </div>
+    </div>
+    <script>
+      function onCalculatorButtonClick(action) {
+        console.log(action);
+        let input = document.querySelector('.inputBox');
+
+        if (action === 'AC') {
+          input.value = '';
+        } else if (action === '=') {
+          equation.innerHTML = input.value;
+          input.value = eval(input.value);
+        } else if (action === 'DEL') {
+          input.value = input.value.slice(0, -1);
+        } else {
+          input.value = input.value + action;
+        }
+      }
+      function showHistory() {
+        let list = document.querySelector('.history-button');
+        list.classList.toggle('visible');
+      }
+    </script>
+  </body>
+</html>

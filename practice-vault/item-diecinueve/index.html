@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+  </head>
+  <body>
+    <button onclick="numberSum()">calculate sum</button>
+    <div class="result1">Total result is...</div>
+    <button class="broken-heart" onclick="countFrom0To10()">
+      From 0 to hero ahh
+    </button>
+    <button onclick="largestNumber()">Largest Number</button>
+    <div class="result">Largest Number in order is...</div>
+    <script>
+      function countFrom0To10(number) {
+        for (let i = 0; i <= 10; i++) {
+          console.log(i);
+        }
+      }
+
+      function numberSum() {
+        let numbers = [0, 10, 20, 30, 50, 70, 9990, 12120, 2220, 1];
+        let result = document.querySelector('.result1');
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          sum = sum + numbers[i];
+        }
+        result.innerHTML = `Total result is: ${sum}`;
+      }
+      // function largestNumber() {
+      //   let largNum = [
+      //     32, 456787878, 23000, 70, 9990, 12120, 2220, 1, 892319827389123, 12,
+      //     123, 123, 1231, 31, 41231231231412312, 3, 123, 123, 123, 123,
+      //   ];
+      //   let result = document.querySelector('.result');
+      //   let currentLargestNumber = 0;
+      //   for (let i = 0; i < largNum.length; i++) {
+      //     let currentNumber = largNum[i];
+      //     if (currentLargestNumber < currentNumber) {
+      //       currentLargestNumber = currentNumber;
+      //     }
+      //   }
+      //   result.innerHTML = `The largest Number is ...${currentLargestNumber}`;
+      // }
+
+      function largestNumber() {
+        let largNum = [234, 435, 231];
+        let result = document.querySelector('.result');
+        let currentLargestNumber = 0;
+
+        for (let i = 0; i < largNum.length; i++) {
+          currentNumber = largNum[i];
+        }
+        if (currentLargestNumber < currentNumber) {
+          currentLargestNumber = currentNumber;
+        }
+
+        result.innerHTML = `the largest number is... ${currentLargestNumber}`;
+      }
+    </script>
+  </body>
+</html>

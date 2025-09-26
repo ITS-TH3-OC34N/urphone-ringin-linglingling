@@ -1,49 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- <head>
-   <title>HTML Template</title>
-   <style>
-    .THEimg {
-        width:400px;
-        height:700px;
-    }
-    .zoom-in{
-        width:500px;
-        height:800px;
-    }
-    .zoom-out{
-        width:300px;
-        height:600px;
-    }
-   </style>
- </head>
- <body>
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .default {
+        width: 400px;
+        height: 700px;
+      }
+      .zoom-in {
+        width: 500px;
+        height: 800px;
+      }
+      .zoom-out {
+        width: 300px;
+        height: 600px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px black solid;
+      }
+      .red {
+        width: 100px;
+        height: 100px;
+        border: 2px rgb(0, 0, 0) solid;
+        background: rgb(225, 122, 122);
+      }
+      .orange {
+        width: 100px;
+        height: 100px;
+        border: 2px rgb(0, 0, 0) solid;
+        background: rgb(225, 168, 122);
+      }
+      .yellow {
+        width: 100px;
+        height: 100px;
+        border: 2px rgb(0, 0, 0) solid;
+        background: rgb(255, 223, 143);
+      }
+      .green {
+        width: 100px;
+        height: 100px;
+        border: 2px rgb(0, 0, 0) solid;
+        background: rgb(151, 225, 122);
+      }
+      .blue {
+        width: 100px;
+        height: 100px;
+        border: 2px rgb(0, 0, 0) solid;
+        background: rgb(138, 224, 255);
+      }
+    </style>
+  </head>
+  <body>
     <button class="aButton" onclick="clickedButton()">Click Me</button>
-  <input class="anInput"/>
-  <button class="echo" onclick="echoInput()"> Echo </button>
-  <p class="paragraph"></p>
-  <button class="zoomO" onclick="zooming()">Zoom in</button>
-  <button class="zoomI" onclick="zoomIn()">Zoom out</button>
-  <img  class="THEimg etheral" src="https://i.pinimg.com/736x/57/63/c3/5763c30cd2a9c0922744819eef9f4067.jpg"/>
-  <script>
-        function clickedButton () {
-            let clicked = document.querySelector('.aButton');
-            clicked.innerHTML = "Clicked!";
+    <input class="anInput" />
+    <button class="echo" onclick="echoInput()">Echo</button>
+    <p class="paragraph"></p>
+    <button class="zoomO" onclick="zoomOut()">Zoom Out</button>
+    <button class="zoomI" onclick="zoomIn()">Zoom In</button>
+    <img
+      class="img default"
+      src="https://i.pinimg.com/736x/57/63/c3/5763c30cd2a9c0922744819eef9f4067.jpg"
+    />
+    <div class="box"></div>
+    <button onclick="colorChanging('red')">red</button>
+    <button onclick="colorChanging('orange')">orange</button>
+    <button onclick="colorChanging('yellow')">yellow</button>
+    <button onclick="colorChanging('green')">green</button>
+    <button onclick="colorChanging('blue')">blue</button>
+    <script>
+      function clickedButton() {
+        let clicked = document.querySelector('.aButton');
+        clicked.innerHTML = 'Clicked!';
+      }
+      function echoInput() {
+        let input = document.querySelector('.anInput');
+        let echoButton = document.querySelector('.echo');
+        let para = document.querySelector('.paragraph');
+        let inputValue = input.value;
+        para.innerHTML = ` your result it = ${inputValue}`;
+      }
+      function zoomIn() {
+        let img = document.querySelector('.img');
+
+        if (img.classList.contains('default')) {
+          img.classList.remove('default');
+          img.classList.add('zoom-in');
+        } else {
+          img.classList.remove('zoom-out');
+          img.classList.add('default');
         }
-function echoInput () {
-let input = document.querySelector('.anInput');
-let echoButton = document.querySelector('.echo');
-let para = document.querySelector('.paragraph');
- let inputValue = input.value;
- para.innerHTML = ` your result it = ${inputValue}`;
+      }
+      function zoomOut() {
+        let img = document.querySelector('.img');
 
-}
-function zoomIn () {
-let Zi = document.querySelector('.zoomI');
-
-
-
-}
+        if (img.classList.contains('default')) {
+          img.classList.remove('default');
+          img.classList.add('zoom-out');
+        } else {
+          img.classList.remove('zoom-in');
+          img.classList.add('default');
+        }
+      }
+      let previousColor;
+      function colorChanging(color) {
+        let box = document.querySelector('.box');
+        box.classList.remove(previousColor);
+        box.classList.add(color);
+        previousColor = color;
+      }
     </script>
- </body>
+  </body>
 </html>

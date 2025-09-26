@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+        }
+      .clickedButton {  
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+      }
+      .clickedButton:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <button class="clickedButton" onclick="clickingButton()">
+      Click me to open an alert
+    </button>
+</div>
+    <script>
+      function clickingButton() {
+        let clicked = document.querySelector('.clickedButton');
+        alert('Button Clicked');
+      }
+
+    </script>
+
+  </body>
+</html>

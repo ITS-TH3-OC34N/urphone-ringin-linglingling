@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background: #f8f8f8;
+      }
+      .container {
+        background: white;
+        border: 1.5px solid lightgray;
+        padding: 50px;
+      }
+      .printButton {
+        border: 1.5px solid rgb(165, 165, 165);
+        padding: 20px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">List of names</div>
+      <button class="printButton" onclick="printNames()">Print Names</button>
+      <ul class="nameList"></ul>
+    </div>
+    <script>
+      let names = ['suna', 'osamu', 'atsumu', 'akaashi', 'kaiser'];
+      function printNames() {
+        let nameList = document.querySelector('.nameList');
+        let listNames = '';
+        for (let i = 0; i < names.length; i++) {
+            listNames = listNames + `<li>${names[i]}</li>`;
+        }
+
+        nameList.innerHTML = listNames;
+      }
+    </script>
+  </body>
+</html>

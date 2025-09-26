@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .div1 {
+        border: 1px black solid;
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: rgb(0, 30, 255);
+      }
+      .yellow {
+        background: rgb(246, 255, 0);
+      }
+      .green {
+        background: rgb(0, 255, 21);
+      }
+      .orange {
+        background: rgb(255, 123, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <input placeholder="Type something" class="input1" />
+    <button class="button1" onclick="textInput()">Echo</button>
+    <p class="paragraph">text result</p>
+    <button class="clicked" onclick="clickedMe()">click me</button>
+    <div class="div1"></div>
+    <button class="color red" onclick=" colorChanging ('red') ">red</button>
+    <button class="color blue" onclick=" colorChanging ('blue') ">blue</button>
+    <button class="color yellow" onclick=" colorChanging ('yellow') ">
+      yellow
+    </button>
+    <button class="color green" onclick=" colorChanging ('green') ">
+      green
+    </button>
+    <button class="color orange" onclick=" colorChanging ('orange') ">
+      orange
+    </button>
+    <script>
+      function clickedMe() {
+        let click = document.querySelector('.clicked');
+        click.innerHTML = 'Clicked!';
+      }
+      function textInput() {
+        let input = document.querySelector('.input1');
+        let echoButton = document.querySelector('.button1');
+        let para = document.querySelector('.paragraph');
+        let inputValue = input.value;
+        para.innerHTML = ` what you said was... ${inputValue}`;
+      }
+      let previousColor;
+      function colorChanging(color) {
+        let box = document.querySelector('.div1');
+        box.classList.add(color);
+        box.classList.remove(previousColor);
+        previousColor = color;
+      }
+      function getLargestNumber(){
+        let number=[0,0,0,0,0,0,0,0,0,0,0,0,100,1300]
+        let currentLargestNumber = 0
+        for(let i=0;i< numbers.length; i++){
+let currentLargestNumbeer = numbers[i];
+if(currentLargestNumber < currentNumber){
+    currentLargestNumber = currentNumber;
+}
+        }
+      }
+      alert = currentLargestNumbeer
+    </script>
+  </body>
+</html>

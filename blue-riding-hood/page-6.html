@@ -1,21 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- <head>
-   <meta name="robots" content="noindex" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>Blue riding hood</title>
-   <link rel="stylesheet" type="text/css" href="global.css" />
-   <link rel="stylesheet"     href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-   <style>
-   </style>
- </head>
- <body class="indie-flower-regular">
-   <div class="container">
-     <div class="page page-6 tilt-in-fwd-tr">
-       <div class="BAHAHA"><span class="blue">Blue</span> Riding Hood enters her grandma's room and the starts questioning why grandma looks so differnet </div> 
-       <div class="text-bold" >As the big bad wolf, what would you say?</div>
-       <img class="pictureBG" src = "https://img.freepik.com/free-vector/house-attic-in…or-empty-old-mansard-room_107791-16776.jpg?w=1380"/>
-     </div>
-   </div>
- </body>
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      .pictureBG {
+        width: 100%;
+        margin-top: 50px;
+      }
+
+      .blue-riding-hood-img {
+        width: 200px;
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+      }
+      .wolf-img {
+        position: absolute;
+        bottom: 10px;
+        right: 50px;
+        width: 300px;
+      }
+      .option {
+        animation: rainbowShadow 6s infinite;
+        position: absolute;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.847);
+        box-shadow: 0px -1px 49px -1px gray;
+        transition: all 0.3s;
+      }
+      .option1 {
+        top: 100px;
+        right: 100px;
+      }
+      .option2 {
+        bottom: 190px;
+        right: 250px;
+      }
+      .option3 {
+        bottom: 70px;
+        right: 300px;
+      }
+      .option:hover {
+        animation: rainbowShadow 6s infinite;
+        position: absolute;
+        transform: scale(1.3);
+        background: rgb(255, 255, 255);
+        box-shadow: 0px -1px 49px gray;
+      }
+      .questions:hover {
+        position: absolute;
+        transition: all 0.3s;
+        background: rgb(255, 255, 255);
+        transform: scale(1.3);
+      }
+
+      .questions {
+        width: 280px;
+        height: 30px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.848);
+        position: absolute;
+        top: 145px;
+        left: 20px;
+      }
+      .room {
+        position: relative;
+      }
+      .option {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="indie-flower-regular">
+    <div class="container">
+      <div class="page page-6 tilt-in-fwd-tr">
+        <div class="BAHAHA">
+          <span class="blue">Blue </span> Riding Hood enters her grandma's room
+          and the starts questioning why grandma looks so differnet
+        </div>
+        <div class="text-bold">As the big bad wolf, what would you say?</div>
+        <div class="room">
+          <img
+            class="pictureBG"
+            src="https://img.freepik.com/free-vector/house-attic-in…or-empty-old-mansard-room_107791-16776.jpg?w=1380"
+          />
+          <img
+            class="blue-riding-hood-img"
+            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+          />
+          <img
+            class="wolf-img"
+            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/wolfgrandma.png"
+          />
+          <div class="questions">Grandma, what happened to you?</div>
+          <a href="page-7.index.html" class="option option1"
+            >I went clubbing to hard!</a
+          >
+          <a href="page-7.html" class="option option2">I just feel so OLD!</a>
+          <a href="page-7.html" class="option option3"
+            >Maybe it's the weather...?</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

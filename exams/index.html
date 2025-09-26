@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .div1 {
+        width: 100px;
+        height: 100px;
+        border: 2px black solid;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .yellow {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="input1" placeholder="type Something" />
+    <button onclick="alertMessage()">Alert the message</button>
+    <div class="div1"></div>
+    <button class="color green" onclick="changingColor('green')">green</button>
+    <button class="color yellow" onclick="changingColor('yellow')">
+      yellow
+    </button>
+    <button class="color red" onclick="changingColor('red')">red</button>
+    <input type="number" class="input2" />
+    <button class="button1" onclick="gradeChecker()">Check your grade</button>
+    <div class="result">You got...</div>
+    <button class="printNumbers" onclick="arrayNumbers()">
+      print the numbers
+    </button>
+    <script>
+      function alertMessage() {
+        let input1 = document.querySelector('.input1');
+        let input1Value = input1.value;
+        alert(input1.value);
+      }
+      let previousColor;
+      function changingColor(color) {
+        let box = document.querySelector('.div1');
+        box.classList.add(color);
+        box.classList.remove(previousColor);
+        previousColor = color;
+      }
+      function gradeChecker() {
+        let result1 = document.querySelABC('.result');
+        let input2 = document.querySelector('.input2');
+        let input2Value = input2.value;
+        let result;
+        if (input2.value >= 10) {
+          result = 'Fantasic! Its an A+';
+        } else if (input2.value < 9 && input2.value > 7) {
+          result = 'Great job! Its a B';
+        } else if (input2.value < 6 && input2.value > 4) {
+          result = 'Nice try! Its a C';
+        } else if (input2.value < 1 && input2.value > 3) {
+          result = 'Bad. Its a D';
+        } else {
+          result = 'Give up Already. Its an F-';
+        }
+        result1.innerHTML = result;
+      }
+      let number = [132, 234, 654, 768, 132, 234, 134, 45, 230, 345];
+      function arrayNumbers() {
+        for (let i = 0; i < number.length; i++) {
+          console.log(`Number ${i + 1} is ${number[i]}`);
+        }
+      }
+    </script>
+  </body>
+</html>

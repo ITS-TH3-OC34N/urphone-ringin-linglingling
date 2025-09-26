@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .div1 {
+        height: 100px;
+        border: 3px black solid;
+        width: 100px;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .gold {
+        background: rgb(255, 252, 102);
+      }
+      .green {
+        background: rgb(18, 237, 62);
+      }
+    </style>
+  </head>
+  <body>
+    <input class="input1" placeholder="type something" />
+    <button onclick="alertMessage()">Alert the message</button>
+    <div class="div1"></div>
+    <button class="color green" onclick="changingColor('green')">green</button>
+    <button class="color gold" onclick="changingColor('gold')">gold</button>
+    <button class="color red" onclick="changingColor('red')">red</button>
+    <button class="color blue" onclick="changingColor('blue')">blue</button>
+    <script>
+      function alertMessage() {
+        let input1 = document.querySelector('.input1');
+        let input1Value = input1.value;
+        alert(input1.value);
+      }
+      let previousColor;
+      function changingColor(color) {
+        let box = document.querySelector('.div1');
+        box.classList.add(color);
+        box.classList.remove(previousColor);
+        previousColor = color;
+      }
+    </script>
+  </body>
+</html>
