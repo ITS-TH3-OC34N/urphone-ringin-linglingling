@@ -7,7 +7,7 @@
         background: #f5e7e7;
         margin: 0;
       }
-     @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Comic+Relief:wght@400;700&family=League+Script&family=Monomakh&family=Poiret+One&family=Rubik+Puddles&family=Sour+Gummy:wght@100&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Comic+Relief:wght@400;700&family=League+Script&family=Monomakh&family=Poiret+One&family=Rubik+Puddles&family=Sour+Gummy:wght@100&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
       .fonted {
         font-family: 'Sour Gummy', sans-serif;
         font-optical-sizing: auto;
@@ -63,20 +63,16 @@
         color: #ffffff;
       }
       .option1:hover {
-        color: rgb(52, 70, 100);
-        background: rgb(110, 121, 149);
+        color: rgb(82, 127, 203);
       }
       .option2:hover {
-        color: rgb(52, 70, 100);
-        background: rgb(110, 121, 149);
+        color: rgb(82, 127, 203);
       }
       .option3:hover {
-        color: rgb(52, 70, 100);
-        background: rgb(110, 121, 149);
+        color: rgb(82, 127, 203);
       }
       .option4:hover {
-        color: rgb(52, 70, 100);
-        background: rgb(110, 121, 149);
+        color: rgb(82, 127, 203);
       }
       .signInBox {
         height: 842.5px;
@@ -115,8 +111,9 @@
         border: white;
         height: 30px;
         font-size: 20px;
+        padding:5px;
       }
-      .signIn {
+      .button {
         border-radius: 5px;
         width: 500px;
         position: absolute;
@@ -128,12 +125,21 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: 30px;
+        font-size: 20px;
+        padding:10px;
       }
       .body {
         height: 900.5px;
         width: 2000px;
         background: rgb(227, 228, 238);
+      }
+      .google{
+        position:absolute;
+        top:250px;
+      }
+       .apple{
+        position:absolute;
+        top:300px;
       }
     </style>
   </head>
@@ -145,9 +151,9 @@
       <div class="signInBox">
         <input class="gmailInput" placeholder="Janice.lopez549@gmail.com" />
         <div class="signIn">
-          <button class="google fonted">Use google to login.</button>
-          <button class="apple fonted">Use apple to login.</button>
-          <button class="twitter fonted">Use twitter to login.</button>
+          <button class=" button google fonted">Use google to login.</button>
+          <button class="button apple fonted">Use apple to login.</button>
+          <button class="button twitter fonted">Use twitter to login.</button>
         </div>
       </div>
     </div>
@@ -156,10 +162,10 @@
     </div>
     <div class="footer">
       <div class="options fonted">
-        <div class="option1 fonted">home</div>
+        <a class="option1 fonted" href="mainpage.html">home</a>
         <a href="login-signup.html " class="option2 fonted">login</a>
         <a href="login-signup.html " class="option3 fonted">sign up</a>
-        <div class="option4 fonted">help</div>
+        <a class="option4 fonted">help</a>
       </div>
     </div>
   </body>
