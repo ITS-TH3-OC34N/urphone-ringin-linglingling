@@ -7,11 +7,13 @@
         background: #f5e7e7;
         margin: 0;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=League+Script&family=Monomakh&family=Poiret+One&family=Rubik+Puddles&family=Sour+Gummy:wght@100&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Comic+Relief:wght@400;700&family=League+Script&family=Monomakh&family=Poiret+One&family=Rubik+Puddles&family=Sour+Gummy:wght@100&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
       .fonted {
-        font-family: 'Poiret One', sans-serif;
-        font-weight: 400;
-        font-style: bold;
+        font-family: 'Sour Gummy', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+        font-variation-settings: 'wdth' 100;
       }
       .titled {
         font-family: 'Tinos', serif;
@@ -19,32 +21,146 @@
         font-style: normal;
       }
       a {
-        text-decoration: none;
         color: white;
+        text-decoration: none;
       }
       body {
-        background: #f5e7e7;
+        background: #ffffff;
         margin: 0;
+        position: relative;
       }
       .header {
-        background: #d6b5a7;
-
+        background: rgb(100, 108, 129);
         display: flex;
         justify-content: center;
         position: sticky;
         top: 0;
         z-index: 100;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 2000px;
       }
       .maintitle {
         color: white;
         font-size: 70px;
+      }
+      .footer {
+        background: rgb(55, 61, 76);
+        margin: 0px;
+        color: white;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        width: 2000px;
+      }
+      .options {
+        font-size: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 200px;
+      }
+      .divT1 {
+        color: #ffffff;
+      }
+      .option1:hover {
+        color: rgb(52, 70, 100);
+        background: rgb(110, 121, 149);
+      }
+      .option2:hover {
+        color: rgb(52, 70, 100);
+        background: rgb(110, 121, 149);
+      }
+      .option3:hover {
+        color: rgb(52, 70, 100);
+        background: rgb(110, 121, 149);
+      }
+      .option4:hover {
+        color: rgb(52, 70, 100);
+        background: rgb(110, 121, 149);
+      }
+      .signInBox {
+        height: 842.5px;
+        width: 900px;
+        background: rgb(227, 228, 238);
+      }
+      .upperfooter {
+        position: absolute;
+        display: flex;
+        background: rgb(100, 108, 129);
+        justify-content: center;
+        width: 2000px;
+        bottom: -195.75px;
+        color: #ffffff;
+        bottom: 55px;
+      }
+      .upperfooterh1 {
+        font-size: 50px;
+      }
+      .signInBox {
+        position: absolute;
+        left: 675px;
+        width: 600px;
+        height: 675px;
+        background: rgb(68, 76, 108);
+        bottom: 195px;
+        border-radius: 30px;
+      }
+      .gmailInput {
+        border-radius: 5px;
+        width: 500px;
+        position: absolute;
+        top: 50px;
+        left: 45px;
+        color: black;
+        border: white;
+        height: 30px;
+        font-size: 20px;
+      }
+      .signIn {
+        border-radius: 5px;
+        width: 500px;
+        position: absolute;
+        top: 200px;
+        left: 45px;
+        color: black;
+        border: white;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 30px;
+      }
+      .body {
+        height: 900.5px;
+        width: 2000px;
+        background: rgb(227, 228, 238);
       }
     </style>
   </head>
   <body>
     <div class="header titled">
       <h1 class="maintitle">AboutMeSTRENGTHS</h1>
+    </div>
+    <div class="body">
+      <div class="signInBox">
+        <input class="gmailInput" placeholder="Janice.lopez549@gmail.com" />
+        <div class="signIn">
+          <button class="google fonted">Use google to login.</button>
+          <button class="apple fonted">Use apple to login.</button>
+          <button class="twitter fonted">Use twitter to login.</button>
+        </div>
+      </div>
+    </div>
+    <div class="upperfooter">
+      <h1 class="upperfooterh1">AboutMeSTRENGTHS.com</h1>
+    </div>
+    <div class="footer">
+      <div class="options fonted">
+        <div class="option1 fonted">home</div>
+        <a href="login-signup.html " class="option2 fonted">login</a>
+        <a href="login-signup.html " class="option3 fonted">sign up</a>
+        <div class="option4 fonted">help</div>
+      </div>
     </div>
   </body>
 </html>
